@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[101]:
+
 
 
 
@@ -25,7 +25,7 @@ warnings.filterwarnings("ignore")
 
 # Question 1:
 
-# In[102]:
+
 
 
 
@@ -33,7 +33,7 @@ df=pd.read_csv("/Users/vijay/Downloads/datasets/Salary_Data.csv")
 df.head()
 
 
-# In[103]:
+
 
 
 
@@ -42,7 +42,7 @@ Y = df.iloc[:, 1].values
 X_Train, X_Test, Y_Train, Y_Test = train_test_split(X,Y, test_size=1/3,random_state = 0)
 
 
-# In[104]:
+
 
 
 
@@ -52,14 +52,14 @@ regressor.fit(X_Train, Y_Train)
 Y_Pred = regressor.predict(X_Test)
 
 
-# In[105]:
+
 
 
 
 mean_squared_error(Y_Test,Y_Pred)
 
 
-# In[106]:
+
 
 
 
@@ -70,7 +70,7 @@ plt.scatter(X_Train, Y_Train)
 plt.show()
 
 
-# In[107]:
+
 
 
 plt.title('Testing data')
@@ -82,14 +82,14 @@ plt.show()
 
 # Question 2:
 
-# In[118]:
+
 
 
 df2=pd.read_csv("/Users/vijay/Downloads/datasets/Salary_Data.csv")
 df2.head()
 
 
-# In[119]:
+
 
 
 
@@ -100,7 +100,7 @@ imputer = imputer.fit(X)
 X = imputer.transform(X)
 
 
-# In[111]:
+
 
 
 
@@ -117,7 +117,7 @@ plt.ylabel('Wcss')
 plt.show()
 
 
-# In[128]:
+
 
 
 
@@ -127,7 +127,7 @@ km = KMeans(n_clusters=nclusters)
 km.fit(x)
 
 
-# In[129]:
+
 
 
 
@@ -139,7 +139,7 @@ print('Silhouette score:',score)
 
 # Question 3:
 
-# In[130]:
+
 
 
 scaler = preprocessing.StandardScaler()
@@ -148,7 +148,7 @@ X_scaled_array = scaler.transform(x)
 X_scaled = pd.DataFrame(X_scaled_array, columns = x.columns)
 
 
-# In[115]:
+
 
 
 from sklearn.cluster import KMeans
@@ -157,7 +157,7 @@ km = KMeans(n_clusters=nclusters)
 km.fit(X_scaled)
 
 
-# In[116]:
+
 
 
 
